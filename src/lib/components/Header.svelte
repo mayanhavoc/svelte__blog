@@ -1,8 +1,26 @@
 <style>
+
 header {
-  background: #136c72;
+  background: #222c2a;
   padding: 1em 0;
   text-align: center;
+}
+
+.nav {
+  visibility: hidden;
+  height: 0;
+  position: absolute;
+}
+
+.nav--visible {
+  visibility: visible;
+  height: auto;
+  position: relative;
+}
+
+.logo {
+  width: 40px;
+  height: auto;
 }
 
 .nav__list {
@@ -17,13 +35,13 @@ header {
 }
 
 .nav__link {
-  color: #fff;
+  color: #f3eed9;
   text-decoration: none;
   text-transform: uppercase;
 }
 
 .nav__link--button {
-  background: #fff;
+  background: #f3eed9;
   color: #136c72;
   padding: .25em 1em;
   border-radius: 10em;
@@ -41,8 +59,8 @@ header {
   height: 3rem;
   padding: 0em;
   border-radius: 50%;
-  background: #072a2d;
-  color: white;
+  background: #824936;
+  color: #f3eed9;
   transition: opacity 250ms ease;
 
   position: absolute;
@@ -82,26 +100,6 @@ header {
   transform: translateY(3px);
 }
 
-/* made changes here from video
-   to make it more accessible.
-   
-   Works the same :) */
-.nav {
-  visibility: hidden;
-  height: 0;
-  position: absolute;
-}
-
-.nav--visible {
-  visibility: visible;
-  height: auto;
-  position: relative;
-}
-
-.logo {
-  height: 30px;
-}
-
 @media only screen and (min-width: 767px) {
   .nav-toggle {
     display: none;
@@ -118,10 +116,8 @@ header {
 
   .nav__list {
     display: flex;
+    align-items: center;
     margin: 0;
-  }
-  
-  .nav__list--primary {
     margin: 0 auto;
   }
   
@@ -135,6 +131,7 @@ header {
     align-items: center;
   }
 }
+
 </style>
 
 <script>
@@ -146,14 +143,16 @@ header {
     <button class="nav-toggle"  aria-label="open navigation" on:click="{() => active = !active}">
       <span class="hamburger"></span>
     </button>
-    <a class="logo" href="#">
-      <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/308367/logo.svg" alt="">
+    <a href="/">
+      <img class="logo" src="logo.svg" alt="">
     </a>
     <nav class="{active ? 'nav': 'nav--visible'}">
       <ul class="nav__list nav__list--primary">
-        <li class="nav__item"><a href="#" class="nav__link">Home</a></li>
-        <li class="nav__item"><a href="#" class="nav__link">About</a></li>
-        <li class="nav__item"><a href="#" class="nav__link">Contact</a></li>
+        <li class="nav__item"><a href="/" class="nav__link">Home</a></li>
+        <li class="nav__item"><a href="/about" class="nav__link">About</a></li>
+        <li class="nav__item"><a href="/work" class="nav__link">Work</a></li>
+        <li class="nav__item"><a href="/blog" class="nav__link">Blog</a></li>
+        <li class="nav__item"><a href="mailto:robertomh@proton.me" class="btn">Contact me</a></li>
       </ul>
     </nav>
   </div>
