@@ -1,31 +1,31 @@
 <style>
-    @media only screen and (min-width: 767px) {
-        .row {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+    .info {
+        background-color: var(--color-light-md);
+    }
 
-        .feature__text {
-            width: 70%;
-            font-weight: 100;
-            font-size: 1.025em;
-        }
+    .info__heading {
+        color: var(--color-highlight);
+    }
 
-        /* .feature__img {
-            width: 45%;
-        }  */
+    .info__text {
+        font-family: var(--secondary-font);
     }
 </style>
 
-<section class="feature">
+<section class="info">
     <div class="container row">
-        <div>
-            <h3 class="feature__title">about me</h3>
-            <p class="feature__text">Collaborating on Cardano initiatives & leading onboarding courses. Passionate about innovation. Co-designed & managed successful Latin American startup incubator.</p>
+        <div class="col">
+            <h2 class="info__heading">Mobile-first</h2>
+            <p class="info__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore id nisi ab fuga voluptatum totam provident, debitis in asperiores quisquam?</p>
         </div>
-        <div class="feature__img">
-            <img src="profile_pic.jpeg" alt="">
+        <div class="col">
+            <h2 class="info__heading">Efficient</h2>
+            <p class="info__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore id nisi ab fuga voluptatum totam provident, debitis in asperiores quisquam?</p>
+        </div>
+        <div class="col">
+            <h2 class="info__heading">Done right</h2>
+            <p class="info__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore id nisi ab fuga voluptatum totam provident, debitis in asperiores quisquam?</p>
+
         </div>
     </div>
 </section>

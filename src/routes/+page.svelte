@@ -1,47 +1,32 @@
 <style>
-  .container {
-    width: 80%;
-    max-width: 1100px;
-    margin: 0 auto;
-  }
-
   .hero {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 611px;
-    height: 90vh;
-    background: #f3eed9;
-    text-align: center;
+      padding: 30vh 0;
+      background-color: var(--color-darkest);
+      color: var(--color-light);
+      min-height: 100vh;
   }
 
   .hero__title {
-      font-size: 3rem;
-      font-family: 'Playfair Display', serif;
-      font-weight: 900;
-      color: #824936;
-      margin: 0 auto;
+      font-size: var(--font-xl);
+  }
+
+  .hero__title--highlight {
+      color: var(--color-highlight);
   }
 
   .hero__text {
-      font-family: 'Roboto', sans-serif;
-      font-weight: 300;
-      color: #222c2a;
-      font-size: 18px;
-      text-transform: uppercase;
-  }
-
-  .hero__btn {
-    margin-top: 1em;
+      font-family: var(--secondary-font);
   }
 </style>
 
 <section class="hero">
-    <div class="container hero">
-        <h1 class="hero__title">Web3 & Smart Contract Development</h1>
-        <div class="hero__btn">
-          <a href="mailto:robertomh@proton.me" class="btn">Contact me</a>
+        <div class="container row">
+            <div class="col">
+                <h1 class="hero__title">Web3 & Blockchain <span class="hero__title--highlight">don't have to be a struggle</span></h1>
+            </div>
+            <div class="col">
+                <p class="hero__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor mollitia, odio cupiditate minus quae vero?</p>
+                <button class="btn">I want to learn</button>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
